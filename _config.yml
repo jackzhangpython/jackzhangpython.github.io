@@ -1,32 +1,16 @@
-# Permalinks
-permalink:           pretty
+name: Jackzhangpython
+description: 
+meta_description: "Jackzhangpython, Blog"
 
-# Setup
-title:               Jackzhangpython
-tagline:             猿
-url:                 http://jackzhangpython.github.io
-paginate:            1
-baseurl:             ""
+markdown: kramdown
+highlighter: pygments
+logo: false
+paginate: 15
+baseurl: /
+domain_name: 'http://localhost'
+google_analytics: 'UA-XXXXXXXX-X'
+gems: [jekyll-paginate]
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-# About/contact
-author:
-  name:              Jackzhangpython
-  url:               https://twitter.com/jackzhangpython
-  email:             jackzhang.python@gmail.com
-
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/jackzhangpython/jackzhangpython.github.io
-
-# Gems
-gems:
-  - jekyll-paginate
-  - jekyll-gist
+# Details for the RSS feed generator
+url:            'http://jackzhangpython.github.io'
+author:         'Jackzhangpython'
