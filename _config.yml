@@ -3,7 +3,6 @@ description:
 meta_description: "Jackzhangpython, Blog"
 
 permalink: "/:categories/:title.html"
-markdown: kramdown
 highlighter: pygments
 logo: false
 paginate: 15
