@@ -1,2 +1,0 @@
-# jackzhangpython.github.io
-blog
