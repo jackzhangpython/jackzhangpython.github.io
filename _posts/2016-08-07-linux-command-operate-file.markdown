@@ -8,7 +8,7 @@ categories: Linux
 在Linux系统中，**_一切皆文件_**。想要愉快的使用Linux系统，操作文件的命令系列是必备技能之一。
 
 ###ls
-列出目录中内容
+列出目录/子目录中文件，使用次数最多的命令之一
 >######NAME
 >      ls - list directory contents
 
@@ -17,4 +17,4 @@ categories: Linux
 
 >######DESCRIPTION
 >      List information about the FILEs (the current directory by default). 
->      Sort entries alphabetically if none of -cftuvSUX nor **--sort**.
+>      Sort entries alphabetically if none of -cftuvSUX nor --sort.

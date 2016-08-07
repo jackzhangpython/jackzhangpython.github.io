@@ -8,6 +8,7 @@ logo: false
 paginate: 15
 encoding: utf-8
 markdown: redcarpet
+baseurl: ""
 
 domain_name: 'http://jackzhangpython.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
