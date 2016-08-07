@@ -2,7 +2,7 @@ name: Jackzhangpython
 description: 
 meta_description: "Jackzhangpython, Blog"
 
-permalink: "/:categories/:year-:month-:day-:title.html"
+permalink: "/:categories/:title.html"
 markdown: kramdown
 highlighter: pygments
 logo: false
