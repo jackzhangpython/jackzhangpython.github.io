@@ -18,3 +18,5 @@ categories: Linux
 >######DESCRIPTION
 >      List information about the FILEs (the current directory by default). 
 >      Sort entries alphabetically if none of -cftuvSUX nor --sort.
+
+- ls path 列出指定目录/子目录中文件
