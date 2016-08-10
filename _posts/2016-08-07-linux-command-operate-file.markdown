@@ -8,6 +8,7 @@ categories: Linux
 在Linux系统中，**_一切皆文件_**。想要愉快的使用Linux系统，操作文件的命令系列是必备技能之一。
 
 ##一 列出目录 ls
+---
 列出目录/子目录中文件，使用次数最多的命令之一，默认按字母排序。
 <p>_ls [OPTION]... [FILE]..._</p>
 
@@ -115,5 +116,12 @@ categories: Linux
 	-rw-r--r--@  1 user  staff    12M  2 21 16:13 node-v4.3.1.pkg
 	-rw-r--r--@  1 user  staff   176M  2 21 15:57 webstorm.dmg
 
+##二 显示路径 pwd
+---
+显示当前所在工作目录绝对路径
+<p>_pwd [-L | -P]_</p>
+
+	linux:ning user$ pwd
+	/Users/user/File/ning
 
 > 引用自《[Linux命令速查手册](https://book.douban.com/subject/4046184/ "豆瓣读书")》
