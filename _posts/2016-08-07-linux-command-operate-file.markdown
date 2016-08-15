@@ -123,5 +123,37 @@ categories: Linux
 
 	linux:ning user$ pwd
 	/Users/user/File/ning
+	
+##三 切换目录 cd
+---
+切换到指定工作目录，使用次数最多的命令之一
+<p>_cd [-options] [args ...]_</p>
+	
+####cd path
+使用相对路径/绝对路径切换当前工作目录。
+	
+	#使用相对路径切换
+	linux:~ user$ cd Java
+	linux:Java user$
+	
+	linux:apache-tomcat-7.0.63 user $ cd ../..
+	linux:~ user $ 
+	
+	linux:Maven user $ cd ~
+	linux:~ user $
+	
+	#使用绝对路径切换
+	linux:Maven user $ cd /Users/user
+	linux:~ user $
+	
+####cd -
+切换至上一个工作目录。
+
+	linux:Maven user $ pwd
+	/Users/user/Java/Maven
+	linux:Maven user $ cd ~
+	linux:~ user $ cd -
+	/Users/user/Java/Maven
+	linux:Maven user $
 
 > 引用自《[Linux命令速查手册](https://book.douban.com/subject/4046184/ "豆瓣读书")》
