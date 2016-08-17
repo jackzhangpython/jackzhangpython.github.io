@@ -154,6 +154,29 @@ categories: Linux
 	linux:Maven user $ cd ~
 	linux:~ user $ cd -
 	/Users/user/Java/Maven
-	linux:Maven user $
+	
+## 创建文件/修改文件时间 touch
+---
+修改指定文件时间，如文件不存在则创建。
+<p>_touch [-A [-][[hh]mm]SS] [-acfhm] [-r file] [-t [[CC]YY]MMDDhhmm[.SS]] file ..._</p>
+
+	#修改文件时间
+	EBJ1011:Maven xiaoningzhang$ ls -l
+	total 56
+	-rw-r--r--@  1 xiaoningzhang  staff   2541  4 22  2015 README.txt
+	EBJ1011:Maven xiaoningzhang$ touch README.txt
+	EBJ1011:Maven xiaoningzhang$ ls -l
+	total 56
+	-rw-r--r--@  1 xiaoningzhang  staff   2541  8 17 21:34 README.txt
+	
+	#创建文件a.txt
+	EBJ1011:Downloads xiaoningzhang$ ls
+	48362221457590032191.jpg	node-v4.3.1.pkg
+	Flux.zip			npm-debug.log
+	EBJ1011:Downloads xiaoningzhang$ touch a.txt
+	EBJ1011:Downloads xiaoningzhang$ ls
+	48362221457590032191.jpg	node-v4.3.1.pkg
+	Flux.zip			npm-debug.log
+	a.txt		
 
 > 引用自《[Linux命令速查手册](https://book.douban.com/subject/4046184/ "豆瓣读书")》
