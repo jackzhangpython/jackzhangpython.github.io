@@ -285,4 +285,47 @@ categories: Linux
 	./Maven/boot:
 	.........	
 
+##移动文件 mv
+移动文件/目录到目标目录，也可作为重命名文件来使用。
+<p>_mv [-f | -i | -n] [-v] source target_</p>
+<p>_mv [-f | -i | -n] [-v] source ... directory_</p>
+
+	#移动文件到目标目录
+	linux:test user$ ls
+	a.txt		downloads
+	linux:test user$ mv a.txt downloads/a.txt
+	linux:test user$ ls -R
+	downloads
+	./downloads:
+	a.txt	game
+	
+	./downloads/game:
+	wow
+	
+	./downloads/game/wow:
+	
+	#一定文件到目标目录，并重命名
+	linux:test user$ mv downloads/a.txt ./b.txt
+	linux:test user$ ls -R
+	b.txt		downloads
+	./downloads:
+	game
+	
+	./downloads/game:
+	wow
+	
+	./downloads/game/wow:
+	
+	#移动目录到目标目录
+	linux:test user$ mv downloads/game/wow .
+	linux:test user$ ls -R
+	b.txt		downloads	wow
+	./downloads:
+	game
+	
+	./downloads/game:
+	
+	./wow:
+
+
 > 引用自《[Linux命令速查手册](https://book.douban.com/subject/4046184/ "豆瓣读书")》
