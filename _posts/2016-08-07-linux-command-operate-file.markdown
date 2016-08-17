@@ -116,14 +116,14 @@ categories: Linux
 	-rw-r--r--@  1 user  staff   176M  2 21 15:57 webstorm.dmg
 
 ##二 显示路径 pwd
-显示当前所在工作目录绝对路径
+显示当前所在工作目录绝对路径。
 <p>_pwd [-L | -P]_</p>
 
 	linux:ning user$ pwd
 	/Users/user/File/ning
 	
 ##三 切换目录 cd
-切换到指定工作目录，使用次数最多的命令之一
+切换到指定工作目录，使用次数最多的命令之一。
 <p>_cd [-options] [args ...]_</p>
 	
 ####cd path
@@ -179,8 +179,8 @@ categories: Linux
 在当前工作目录下创建目录。
 <p>_mkdir [-pv] [-m mode] directory_name ..._</p>
 
-#### mkdir foldername
-创建指定名称目录
+####mkdir directory
+创建指定名称目录。
 
 	linux:Downloads user$ ls
 	48362221457590032191.jpg	node-v4.3.1.pkg
@@ -191,14 +191,13 @@ categories: Linux
 	Flux.zip			npm-debug.log
 	test
 
-#### mkdir path
-为指定路径逐级创建目录
+####mkdir path
+为指定路径逐级创建目录。
 
 	linux:test user$ ls
 	linux:test user$ mkdir -p downloads/game/wow
 	linux:test user$ ls -R
 	downloads
-	
 	./downloads:
 	game
 	
@@ -206,5 +205,84 @@ categories: Linux
 	wow
 	
 	./downloads/game/wow:
+	
+## 六 复制文件 cp
+复制文件/目录到目标位置。
+<p>_cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file target_file_</p>
+<p>_cp [-R [-H | -L | -P]] [-fi | -n] [-apvX] source_file ... target_directory_</p>
+
+####cp source target
+复制文件到目标位置，存在则覆盖。
+
+	#复制到指定目录
+	linux:test user$ cp ~/Downloads/a.txt downloads/game/wow/
+	linux:test user$ ls -R
+	downloads
+	./downloads:
+	game
+	
+	./downloads/game:
+	wow
+	
+	./downloads/game/wow:
+	a.txt
+	
+	#复制到当前目录
+	linux:test user$ cp ~/Downloads/a.txt .
+	linux:test user$ ls -R
+	a.txt		downloads
+	./downloads:
+	game
+	
+	./downloads/game:
+	wow
+	
+	./downloads/game/wow:
+	a.txt
+	
+	#复制到指定目录 并重命名
+	linux:test user$ cp ~/Downloads/a.txt downloads/b.txt
+	linux:test user$ ls -R
+	a.txt		downloads
+	./downloads:
+	b.txt	game
+	
+	./downloads/game:
+	wow
+	
+	./downloads/game/wow:
+	a.txt
+	
+####cp source target(通配符)
+复制与通配符匹配的文件到指定目录，存在则覆盖。
+
+	linux:test user$ cp ~/Downloads/*.txt .
+	linux:test user$ ls
+	a.txt		downloads	
+
+####cp -p source target
+复制文件到目标位置，存在则询问是否覆盖。
+
+	linux:test user$ cp -i ~/Downloads/*.txt .
+	overwrite ./a.txt? (y/n [n]) y
+	linux:test user$ ls
+	a.txt		downloads
+	linux:test user$
+
+####cp -a source target
+复制整个目录及内容到目标位置。
+
+	linux:test user$ cp -a ~/Java/Maven .
+	linux:test user$ ls -R
+	Maven		a.txt		downloads
+	./Maven:
+	LICENSE		README.txt	boot		lib
+	NOTICE		bin		conf
+	
+	./Maven/bin:
+	.........
+	
+	./Maven/boot:
+	.........	
 
 > 引用自《[Linux命令速查手册](https://book.douban.com/subject/4046184/ "豆瓣读书")》
