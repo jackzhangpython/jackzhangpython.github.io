@@ -8,7 +8,6 @@ categories: Linux
 在Linux系统中，**_一切皆文件_**。想要愉快的使用Linux系统，操作文件的命令系列是必备技能之一。
 
 ##一 列出目录 ls
----
 列出目录/子目录中文件，使用次数最多的命令之一，默认按字母排序。
 <p>_ls [OPTION]... [FILE]..._</p>
 
@@ -117,7 +116,6 @@ categories: Linux
 	-rw-r--r--@  1 user  staff   176M  2 21 15:57 webstorm.dmg
 
 ##二 显示路径 pwd
----
 显示当前所在工作目录绝对路径
 <p>_pwd [-L | -P]_</p>
 
@@ -125,7 +123,6 @@ categories: Linux
 	/Users/user/File/ning
 	
 ##三 切换目录 cd
----
 切换到指定工作目录，使用次数最多的命令之一
 <p>_cd [-options] [args ...]_</p>
 	
@@ -155,28 +152,59 @@ categories: Linux
 	linux:~ user $ cd -
 	/Users/user/Java/Maven
 	
-## 创建文件/修改文件时间 touch
----
+## 四 创建文件/修改文件时间 touch
 修改指定文件时间，如文件不存在则创建。
 <p>_touch [-A [-][[hh]mm]SS] [-acfhm] [-r file] [-t [[CC]YY]MMDDhhmm[.SS]] file ..._</p>
 
 	#修改文件时间
-	EBJ1011:Maven xiaoningzhang$ ls -l
+	linux:Maven user$ ls -l
 	total 56
-	-rw-r--r--@  1 xiaoningzhang  staff   2541  4 22  2015 README.txt
-	EBJ1011:Maven xiaoningzhang$ touch README.txt
-	EBJ1011:Maven xiaoningzhang$ ls -l
+	-rw-r--r--@  1 user  staff   2541  4 22  2015 README.txt
+	linux:Maven user$ touch README.txt
+	linux:Maven user$ ls -l
 	total 56
-	-rw-r--r--@  1 xiaoningzhang  staff   2541  8 17 21:34 README.txt
+	-rw-r--r--@  1 user  staff   2541  8 17 21:34 README.txt
 	
 	#创建文件a.txt
-	EBJ1011:Downloads xiaoningzhang$ ls
+	linux:Downloads user$ ls
 	48362221457590032191.jpg	node-v4.3.1.pkg
 	Flux.zip			npm-debug.log
-	EBJ1011:Downloads xiaoningzhang$ touch a.txt
-	EBJ1011:Downloads xiaoningzhang$ ls
+	linux:Downloads user$ touch a.txt
+	linux:Downloads user$ ls
 	48362221457590032191.jpg	node-v4.3.1.pkg
 	Flux.zip			npm-debug.log
 	a.txt		
+
+## 五 创建目录 mkdir
+在当前工作目录下创建目录。
+<p>_mkdir [-pv] [-m mode] directory_name ..._</p>
+
+#### mkdir foldername
+创建指定名称目录
+
+	linux:Downloads user$ ls
+	48362221457590032191.jpg	node-v4.3.1.pkg
+	Flux.zip			npm-debug.log
+	linux:Downloads user$ mkdir test
+	linux:Downloads user$ ls
+	48362221457590032191.jpg	node-v4.3.1.pkg
+	Flux.zip			npm-debug.log
+	test
+
+#### mkdir path
+为指定路径逐级创建目录
+
+	linux:test user$ ls
+	linux:test user$ mkdir -p downloads/game/wow
+	linux:test user$ ls -R
+	downloads
+	
+	./downloads:
+	game
+	
+	./downloads/game:
+	wow
+	
+	./downloads/game/wow:
 
 > 引用自《[Linux命令速查手册](https://book.douban.com/subject/4046184/ "豆瓣读书")》
