@@ -285,7 +285,7 @@ categories: Linux
 	./Maven/boot:
 	.........	
 
-##移动文件 mv
+##七 移动文件 mv
 移动文件/目录到目标目录，也可作为重命名文件来使用。
 <p>_mv [-f | -i | -n] [-v] source target_</p>
 <p>_mv [-f | -i | -n] [-v] source ... directory_</p>
@@ -326,6 +326,24 @@ categories: Linux
 	./downloads/game:
 	
 	./wow:
+
+##八 删除文件 rm
+删除指定文件。
+<p>_rm [-dfiPRrvW] file ... unlink file_</p>
+	
+	#删除单个文件
+	linux:test user$ ls
+	a.txt		b.txt		c.txt		downloads	wow
+	linux:test user$ rm b.txt
+	linux:test user$ ls
+	a.txt		c.txt		downloads	wow
+	
+	#使用通配符删除多个文件
+	linux:test user$ ls
+	a.txt		c.txt		downloads	wow
+	linux:test user$ rm *.txt
+	linux:test user$ ls
+	downloads	wow
 
 
 > 引用自《[Linux命令速查手册](https://book.douban.com/subject/4046184/ "豆瓣读书")》
