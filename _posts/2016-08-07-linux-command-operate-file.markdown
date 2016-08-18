@@ -330,7 +330,10 @@ categories: Linux
 ##八 删除文件 rm
 删除指定文件。
 <p>_rm [-dfiPRrvW] file ... unlink file_</p>
-	
+
+####rm file(通配符)
+通过文件全名或通配符指定需要删除的文件。
+
 	#删除单个文件
 	linux:test user$ ls
 	a.txt		b.txt		c.txt		downloads	wow
@@ -345,5 +348,62 @@ categories: Linux
 	linux:test user$ ls
 	downloads	wow
 
+####rm -Rf
+删除目录及内部所有子目录和文件。
+<p>(-r  Equivalent to -R.)</p>
+
+	linux:test user$ ls -R
+	downloads
+	./downloads:
+	game
+	
+	./downloads/game:
+	wow
+	
+	./downloads/game/wow:
+	linux:test user$ rm -rf downloads
+	linux:test user$ ls -R
+	linux:test user$ mkdir -p downloads/game/wow
+	linux:test user$ ls -R
+	downloads
+	./downloads:
+	game
+	
+	./downloads/game:
+	wow
+	
+	./downloads/game/wow:
+	linux:test user$ rm -Rf downloads
+	linux:test user$ ls -R
+	linux:test user$
+	
+##九 删除目录 rmdir
+删除指定目录，被删除目录必须为空。
+<p>_rmdir [-p] directory ..._</p>
+
+	#删除空目录 rmdir directory
+	linux:test user$ ls -R
+	downloads	wow
+	./downloads:
+	game
+	
+	./downloads/game:
+	
+	./wow:
+	linux:test user$ rmdir downloads
+	rmdir: downloads: Directory not empty
+	linux:test user$ rmdir wow
+	linux:test user$ ls -R
+	downloads
+	./downloads:
+	game
+	
+	./downloads/game:
+	linux:test user$
+	
+	#删除路径 rmdir -p path
+	linux:test user$ rmdir -p downloads/game/
+	linux:test user$ ls -R
+	linux:test user$
 
 > 引用自《[Linux命令速查手册](https://book.douban.com/subject/4046184/ "豆瓣读书")》
